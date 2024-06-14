@@ -18,15 +18,15 @@ enum DayPeriod {
   pm,
 }
 
-/// A value representing a time during the day, independent of the date that
-/// day might fall on or the time zone.
+/// Un valore che rappresenta un'ora del giorno, indipendente dalla data
+/// il giorno potrebbe cadere o nel fuso orario.
 ///
-/// The time is represented by [hour] and [minute] pair. Once created, both
-/// values cannot be changed.
+/// L'ora è rappresentata dalla coppia [ora] e [minuti]. Una volta creati, entrambi
+/// i valori non possono essere modificati.
 ///
-/// You can create TimeOfDay using the constructor which requires both hour and
-/// minute or using [DateTime] object.
-/// Hours are specified between 0 and 23, as in a 24-hour clock.
+/// Puoi creare TimeOfDay utilizzando il costruttore che richiede sia hour che
+/// minuto o utilizzando l'oggetto [DateTime].
+/// Le ore sono specificate tra 0 e 23, come in un orologio a 24 ore.
 ///
 /// {@tool snippet}
 ///
@@ -39,11 +39,11 @@ enum DayPeriod {
 ///
 /// See also:
 ///
-///  * [showTimePicker], which returns this type.
-///  * [MaterialLocalizations], which provides methods for formatting values of
-///    this type according to the chosen [Locale].
-///  * [DateTime], which represents date and time, and is subject to eras and
-///    time zones.
+/// * [showTimePicker], che restituisce questo tipo.
+/// * [MaterialLocalizations], che fornisce metodi per la formattazione dei valori di
+/// questo tipo in base alla [Locale] scelta.
+/// * [DateTime], che rappresenta data e ora ed è soggetto a epoche e
+///    Fusi orari.
 @immutable
 class TimeOfDay {
   /// Creates a time of day.

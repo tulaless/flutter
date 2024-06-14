@@ -1339,51 +1339,51 @@ class ListView extends BoxScrollView {
          semanticChildCount: semanticChildCount ?? itemCount,
        );
 
-  /// Creates a fixed-length scrollable linear array of list "items" separated
-  /// by list item "separators".
-  ///
-  /// This constructor is appropriate for list views with a large number of
-  /// item and separator children because the builders are only called for
-  /// the children that are actually visible.
-  ///
-  /// The `itemBuilder` callback will be called with indices greater than
-  /// or equal to zero and less than `itemCount`.
-  ///
-  /// Separators only appear between list items: separator 0 appears after item
-  /// 0 and the last separator appears before the last item.
-  ///
-  /// The `separatorBuilder` callback will be called with indices greater than
-  /// or equal to zero and less than `itemCount - 1`.
-  ///
-  /// The `itemBuilder` and `separatorBuilder` callbacks should always
-  /// actually create widget instances when called. Avoid using a builder that
-  /// returns a previously-constructed widget; if the list view's children are
-  /// created in advance, or all at once when the [ListView] itself is created,
-  /// it is more efficient to use the [ListView] constructor.
-  ///
-  /// {@macro flutter.widgets.ListView.builder.itemBuilder}
-  ///
-  /// {@macro flutter.widgets.PageView.findChildIndexCallback}
-  ///
-  /// {@tool snippet}
-  ///
-  /// This example shows how to create [ListView] whose [ListTile] list items
-  /// are separated by [Divider]s.
-  ///
-  /// ```dart
-  /// ListView.separated(
-  ///   itemCount: 25,
-  ///   separatorBuilder: (BuildContext context, int index) => const Divider(),
-  ///   itemBuilder: (BuildContext context, int index) {
-  ///     return ListTile(
-  ///       title: Text('item $index'),
-  ///     );
-  ///   },
-  /// )
-  /// ```
-  /// {@end-tool}
-  ///
-  /// The `addAutomaticKeepAlives` argument corresponds to the
+  /// Crea un array lineare scorrevole di lunghezza fissa di "elementi" dell'elenco separati
+   /// per voce di elenco "separatori".
+   ///
+   /// Questo costruttore è appropriato per visualizzazioni elenco con un numero elevato di
+   /// elementi secondari e separatori perché i builder sono solo richiesti
+   /// i bambini che sono effettivamente visibili.
+   ///
+   /// Il callback `itemBuilder` verrà chiamato con indici maggiori di
+   /// o uguale a zero e inferiore a "itemCount".
+   ///
+   /// I separatori vengono visualizzati solo tra gli elementi dell'elenco: il separatore 0 appare dopo l'elemento
+   /// 0 e l'ultimo separatore vengono visualizzati prima dell'ultimo elemento.
+   ///
+   /// Il callback `separatorBuilder` verrà chiamato con indici maggiori di
+   /// o uguale a zero e inferiore a `itemCount - 1`.
+   ///
+   /// I callback `itemBuilder` e `separatorBuilder` dovrebbero sempre
+   /// crea effettivamente istanze di widget quando viene chiamato. Evita di usare un costruttore che
+   /// restituisce un widget precedentemente costruito; se i figli della visualizzazione elenco lo sono
+   /// creato in anticipo, o tutto in una volta quando viene creato [ListView] stesso,
+   /// è più efficiente utilizzare il costruttore [ListView].
+   ///
+   /// {@macro flutter.widgets.ListView.builder.itemBuilder}
+   ///
+   /// {@macro flutter.widgets.PageView.findChildIndexCallback}
+   ///
+   /// {@tool snippet}
+   ///
+   /// Questo esempio mostra come creare [ListView] i cui elementi di elenco [ListTile].
+   /// sono separati da [Divisori].
+   ///
+   /// ```dardo
+   /// ListView.separated(
+   /// Conteggio articoli: 25,
+   /// separatorBuilder: (contesto BuildContext, indice int) => const Divider(),
+   /// itemBuilder: (contesto BuildContext, indice int) {
+   /// restituisce ListTile(
+   /// titolo: Testo('elemento $indice'),
+   /// );
+   /// },
+   /// )
+   /// ```
+   /// {@end-tool}
+   ///
+   /// L'argomento `addAutomaticKeepAlives` corrisponde a
   /// [SliverChildBuilderDelegate.addAutomaticKeepAlives] property. The
   /// `addRepaintBoundaries` argument corresponds to the
   /// [SliverChildBuilderDelegate.addRepaintBoundaries] property. The
